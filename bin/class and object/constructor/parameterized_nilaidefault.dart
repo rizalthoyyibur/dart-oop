@@ -3,7 +3,7 @@ class Student {
   int? age;
 
   //constructor dengan parameter
-  Student({String? name = 'Ferdi', int? age = 20}) {
+  Student({String? name = 'Rizal', int? age = 20}) {
     this.name = name;
     this.age = age;
   }

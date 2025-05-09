@@ -1,5 +1,3 @@
-import 'dart:math';
-
 class Nilai {
   final int x;
   final int y;
@@ -7,19 +5,18 @@ class Nilai {
   const Nilai(this.x, this.y);
 }
 
-void main(){
-  //n1 dan n2 memiliki nilai yang sama
+void main() {
+  // n1 dan n2 menggunakan const => objek identik (canonicalized)
   Nilai n1 = const Nilai(10, 20);
-  print('kode hash n1 adalah : ${n1.hashCode}');
+  print('HashCode n1: ${n1.hashCode}');
+
   Nilai n2 = const Nilai(10, 20);
-  print('kode hash n2 adalah : ${n2.hashCode}');
+  print('HashCode n2: ${n2.hashCode}');
 
-  //tanpa const
-  //menghasilkan kode hash yang berbeda
-
+  // n3 dan n4 tanpa const => objek berbeda di memori meskipun nilainya sama
   Nilai n3 = Nilai(10, 20);
-  print('kode hash n3 adalah : ${n3.hashCode}');
+  print('HashCode n3: ${n3.hashCode}');
 
   Nilai n4 = Nilai(10, 20);
-  print('kode hash n4 adalah : ${n4.hashCode}');
+  print('HashCode n4: ${n4.hashCode}');
 }

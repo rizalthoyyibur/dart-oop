@@ -12,7 +12,7 @@ class Siswa {
 }
 
 void main() {
-  Siswa siswa = Siswa('Azhar', 20, 1263);
+  Siswa siswa = Siswa('Rizal', 20, 1263);
   print('Nama : ${siswa.nama}');
   print('umur : ${siswa.umur}');
   print('Nomor Induk : ${siswa.nomorInduk}');
